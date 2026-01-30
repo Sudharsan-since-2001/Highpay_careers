@@ -1,0 +1,126 @@
+.section {
+    padding: 10rem 4rem;
+    background: #fdfaf7;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 8rem;
+}
+
+.title {
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+    color: #000;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: #4b5563;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
+}
+
+.card {
+    background: #fff;
+    border: 2px solid #000;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.05);
+}
+
+.card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 12px 12px 0px #000;
+}
+
+.cardHeader {
+    background: #f1f3f5;
+    padding: 0.75rem 1.5rem;
+    border-bottom: 2px solid #000;
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1.5px solid #000;
+}
+
+.cardBody {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 350px;
+}
+
+.iconWrapper {
+    width: 80px;
+    height: 80px;
+    border-radius: 1.5rem;
+    background: #fdfaf7;
+    border: 2px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    box-shadow: 4px 4px 0px #000;
+}
+
+.cardTitle {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.cardDescription {
+    color: #4b5563;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.learnMore {
+    margin-top: auto;
+    padding-top: 2rem;
+    color: #000;
+    font-weight: 800;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+}
+
+.learnMore:hover {
+    gap: 0.8rem;
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 6rem 1.5rem;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+}

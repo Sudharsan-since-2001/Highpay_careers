@@ -1,0 +1,169 @@
+:root {
+  /* New Inspiration Palette - Light & Modern */
+  --background: #f8f9fa;
+  --foreground: #1a1a1a;
+
+  --primary: #2d2e32;
+  --primary-hover: #000000;
+  --accent: #ff6b6b;
+  /* Playful accent from icons */
+  --secondary: #6c757d;
+
+  --card-bg: #ffffff;
+  --card-border: #e9ecef;
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  --neo-border: 2px solid #1a1a1a;
+  --neo-shadow: 4px 4px 0px #1a1a1a;
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #000;
+}
+
+h1 {
+  font-size: 4.5rem;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  color: #4b5563;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+/* Utilities */
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 4rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+/* Neo-Brutalism Inspired Cards */
+.neo-card {
+  background: var(--card-bg);
+  border: var(--neo-border);
+  box-shadow: var(--neo-shadow);
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  transition: all 0.2s ease;
+}
+
+.neo-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #1a1a1a;
+}
+
+/* Browser Window Style Card */
+.browser-card {
+  background: white;
+  border: 1.5px solid #000;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 6px 6px 0px -1px rgba(0, 0, 0, 0.1);
+}
+
+.browser-header {
+  background: #f1f3f5;
+  padding: 8px 12px;
+  border-bottom: 1.5px solid #000;
+  display: flex;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid #000;
+}
+
+/* Section spacing */
+section {
+  padding: 8rem 0;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 6px;
+  border: 3px solid #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}

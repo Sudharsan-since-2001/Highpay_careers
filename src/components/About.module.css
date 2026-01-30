@@ -1,0 +1,82 @@
+.section {
+    padding: 10rem 4rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    background: #fff;
+}
+
+.heading {
+    text-align: left;
+    margin-bottom: 6rem;
+    max-width: 800px;
+}
+
+.title {
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
+    color: #000;
+    line-height: 1;
+}
+
+.subtitle {
+    color: #4b5563;
+    font-size: 1.25rem;
+    max-width: 600px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.card {
+    background: #fff;
+    border: 2px solid #000;
+    border-radius: 1.5rem;
+    padding: 3rem;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
+    box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.05);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 12px 12px 0px #000;
+}
+
+.icon {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+.cardTitle {
+    font-size: 2rem;
+    color: #000;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.cardText {
+    color: #4b5563;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 6rem 1.5rem;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+}
