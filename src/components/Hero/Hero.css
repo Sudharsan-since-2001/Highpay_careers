@@ -1,0 +1,264 @@
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    position: relative;
+    overflow: hidden;
+    padding-top: 120px;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1;
+    margin-bottom: 24px;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--secondary);
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--foreground);
+    padding: 12px 24px;
+    border-radius: 99px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid var(--glass-border);
+    font-family: var(--font-outfit);
+}
+
+.btn-secondary:hover {
+    background: var(--glass);
+}
+
+.hero-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 20px;
+}
+
+.tech-stack-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    z-index: 1;
+}
+
+.code-window {
+    background: rgba(10, 10, 10, 0.8);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 32px;
+    font-family: 'Fira Code', 'Courier New', monospace;
+    font-size: 16px;
+    position: relative;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+}
+
+.window-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--glass-border);
+    padding-bottom: 10px;
+}
+
+.window-title {
+    color: var(--secondary);
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.window-controls {
+    display: flex;
+    gap: 6px;
+}
+
+.window-controls .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--glass-border);
+}
+
+.code-content pre {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.code-content .keyword {
+    color: #c678dd;
+}
+
+.code-content .type {
+    color: #e5c07b;
+}
+
+.code-content .string {
+    color: #98c379;
+}
+
+.code-content .comment {
+    color: #5c6370;
+    font-style: italic;
+}
+
+.code-content .function {
+    color: #61afef;
+}
+
+.tech-badge {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 99px;
+    padding: 10px 20px;
+    font-family: var(--font-outfit);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 2;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.lvl-badge {
+    top: -50px;
+    left: 20px;
+    font-weight: 800;
+    font-size: 14px;
+    color: var(--foreground);
+    letter-spacing: 1.5px;
+    padding: 12px 24px;
+}
+
+.lvl-badge::before {
+    content: '✦';
+    color: var(--accent);
+}
+
+.status-badge {
+    bottom: -40px;
+    right: -30px;
+    padding: 14px 28px;
+}
+
+.status-badge .check {
+    width: 28px;
+    height: 28px;
+    background: rgba(34, 211, 238, 0.2);
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.status-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.status-label {
+    font-size: 11px;
+    color: var(--secondary);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.status-value {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--foreground);
+}
+
+.glow-orb {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(34, 211, 238, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: -1;
+    animation: rotateGlow 10s infinite linear;
+}
+
+@keyframes rotateGlow {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+@media (max-width: 968px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 140px;
+        gap: 80px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .tech-stack-container {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .lvl-badge {
+        top: -30px;
+        left: 0;
+    }
+
+    .status-badge {
+        bottom: -20px;
+        right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .tech-stack-container {
+        scale: 0.85;
+    }
+}

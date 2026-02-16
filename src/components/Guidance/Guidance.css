@@ -1,0 +1,55 @@
+.guidance-section {
+    padding-bottom: 120px;
+}
+
+.services-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.service-item {
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+    transform: scale(1.02);
+}
+
+.service-icon {
+    font-size: 3rem;
+    background: var(--glass);
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+}
+
+.service-info {
+    flex: 1;
+}
+
+.service-info h3 {
+    font-size: 1.75rem;
+    margin-bottom: 12px;
+}
+
+.service-info p {
+    color: var(--secondary);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .service-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+}
